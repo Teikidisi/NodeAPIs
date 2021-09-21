@@ -2,6 +2,7 @@ const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
 const app = express()
+const port = process.env.PORT || 3000
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
@@ -84,8 +85,8 @@ app.get('*', (req,res) => { //  '*' significa todas las demas ubicaciones no esp
 
 
 
-app.listen(3000, () => { //designar el puerto a usar
-    console.log('Server is up on port 3000.')
+app.listen(port, () => { //designar el puerto a usar
+    console.log('Server is up on port '+port)
 })
 
 // app.get('/help',(req, res) => {
