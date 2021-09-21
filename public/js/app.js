@@ -12,7 +12,7 @@ weatherForm.addEventListener('submit', (e) => {
     e.preventDefault() //evita que se refresque la pagina cada input
 
     const location = search.value
-    fetch('http://localhost:3000/weather?address='+location).then((response) => {
+    fetch('/weather?address='+location).then((response) => {
     response.json().then((data) => { //al response le hacemos parse a json y lo guardamos en data
         if (data.error){ //data es un callback por lo que usa los parametros de las demas funciones previas, tiene acceso a location, forecast, address y error
             console.log('Error accessing the data '+data.error)
