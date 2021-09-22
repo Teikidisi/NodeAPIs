@@ -20,7 +20,7 @@ weatherForm.addEventListener('submit', (e) => {
         } else {
             console.log(data.forecast.Temperature+ ' degrees')
             console.log(data.location)
-            messageTwo.textContent = data.forecast.Temperature+' degrees. Real feel: '+data.forecast['Real feel']+' degrees'
+            messageTwo.textContent = data.forecast.Temperature+' degrees. Real feel: '+data.forecast['Real feel']+' degrees. The humidity is: '+data.forecast.Humidity+' and the sky is: '+data.forecast.Sky
             messageOne.textContent = data.location
         }
     })
